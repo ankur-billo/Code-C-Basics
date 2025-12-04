@@ -2,7 +2,8 @@
 int main(){
     int a[3][3];
     int b[3][3];
-    int mul[3][3];
+    int c[3][3];
+    int sum[3][3];
     
     //1st array input
     printf("Enter the elements in 1st 3x3 array: \n");
@@ -40,22 +41,20 @@ int main(){
         }
         printf("\n");
     }
-    //adding matrices
+    //multiplication matrices
     for(int i=0;i<3;i++){
         for (int j = 0; j < 3; j++)
         {
-          for (int k = 0; k < 3; k++){
-            mul[i][j]= mul[i][j]+ (a[i][k]*b[k][j]);
-          }
+          sum[i][j]=a[i][j]+b[i][j];
         }
     }
 
     printf("\n");
-    printf("Multiplicated matrix:\n");
+    printf("Sum of two matrices:\n");
     for(int i=0;i<3;i++){
         for (int j = 0; j < 3; j++)
         {
-          printf("%d   ",mul[i][j]);
+          printf("%d   ",sum[i][j]);
         }
         printf("\n");
     }
