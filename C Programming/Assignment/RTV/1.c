@@ -11,40 +11,94 @@
 // Real use: Small college marks calculator.
 
 #include <stdio.h>
-// calAvg()
-// {
 
-// }
-// highScore()
-// {
-// }
-// lowScore()
-// {
-// }
-// gradeDistri()
-// {
-// }
+// function to calculate average
+float calAvg(int m[], int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum = sum + m[i];
+    }
+    return (float)sum / n;
+}
+
+// function to calculate highest marks
+int highScore(int *m, int n)
+{
+    int high = *m;
+    for (int i = 0; i < n; i++)
+    {
+        if (*(m + i) > high)
+        {
+            high = *(m + i);
+        }
+    }
+    return high;
+}
+int lowScore(int *m, int n)
+{
+    int low = *m;
+    for (int i = 0; i < n; i++)
+    {
+        if (*(m + i) < low)
+        {
+            low = *(m + i);
+        }
+    }
+    return low;
+}
+
+void gradeDistri(int m[], int n)
+{
+    int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int marks = m[i];
+        if (marks >= 90)
+            A++;
+        else if (marks >= 70)
+            B++;
+        else if (marks >= 50)
+            C++;
+        else if (marks >= 30)
+            D++;
+        else
+            F++;
+    }
+    printf("A (90-100) : %d\n", A);
+    printf("B (70-89) : %d\n", B);
+    printf("C (50-69) : %d\n", C);
+    printf("D (30-49) : %d\n", D);
+    printf("F (0-29) : %d\n", F);
+}
+
 int main()
 {
     int n;
     int marks[100];
     // taking total number of students
     printf("Enter the number of students: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
+
     // taking marks input
-    for(int i=0;i<n;i++){
-        printf("Enter the marks of Student %d : ",i+1);
-        scanf("%d",&marks[i]);
+    printf("\nEnter the marks of %d Students :\n", n);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &marks[i]);
     }
-    // printing the marks of students
-    printf("----- Marks of %d Students -----\n",n);
-    for(int i=0;i<n;i++){
-        printf("%d\n",marks[i]);
-    }
-    
-    // calAvg();
-    // highScore();
-    // lowScore();
-    // gradeDistri();
+
+
+    float avg = calAvg(marks, n);
+    int highest = highScore(marks, n);
+    int lowest = lowScore(marks, n);
+
+    // printing the grades
+    printf("\n----- Grade Distribution of %d Students -----\n", n);
+    gradeDistri(marks, n);
+
+    printf("\nAverage Marks = %.2f\n", avg);
+    printf("Highest Marks = %d\n", highest);
+    printf("Lowest Marks = %d\n", lowest);
     return 0;
 }
