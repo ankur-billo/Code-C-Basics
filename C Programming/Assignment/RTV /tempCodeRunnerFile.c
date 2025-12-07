@@ -84,7 +84,7 @@ int main(){
             break;
         case 5:
             printf("Sayonara! Thanks For Using Our Service!\n");
-            return 0;
+            return;
             
             default:
             printf("Invalid! Try Again!\n");
