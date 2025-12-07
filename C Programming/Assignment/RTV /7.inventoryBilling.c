@@ -8,10 +8,10 @@
 
 #include<stdio.h>
 #define items 10
-float calCost(float *p,int *q){
+float calcuCost(float *p,int *q){
     return (*p)*(*q);
 }
-float calTotal(float *p,int *q,int n){
+float calcuTotal(float *p,int *q,int n){
     float sum=0;
     for(int i=0;i<items;i++){
         sum+= *(p+i) * *(q+i);
@@ -29,16 +29,15 @@ int main(){
         printf("Quantity : ");
         scanf("%d",&qty[i]);
     }
-    printf("\n---------- Inventory Billing ----------\n");
-    printf("Item\t | Quantity \t| Cost \n");
+    printf("\n---------- Inventory Billing System ----------\n");
     for(int i=0;i<10;i++){
-        float cost=calCost(&price[i],&qty[i]);
-        printf("%d. ₹%.2f\t%d\t₹%.2f\n",i+1,price[i],qty[i],cost);
+        float cost=calcuCost(&price[i],&qty[i]);
+        printf("Item %d : ₹%.2f \tQuantity : %d \tCost : ₹%.2f\n",i+1,price[i],qty[i],cost);
     }
     float Sum=0;
-        Sum=calTotal(price,qty,items);
+        Sum=calcuTotal(price,qty,items);
     printf("----------------------------------------\n");
-    printf("Total Billing Amount : ₹%.2f\n",Sum);
+    printf("Total Bill Amount : ₹%.2f\n",Sum);
     printf("----------------------------------------\n");
     return 0;
 }
