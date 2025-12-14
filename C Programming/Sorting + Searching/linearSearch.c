@@ -5,16 +5,20 @@ int main(){
     for(int i=0;i<10;i++){    
         scanf("%d",&arr[i]);
     }
-    int key;
-    printf("\nEnter the element to search : ");
-    scanf("%d",&key);
+    int num,key=0;
+    printf("Enter the element to search : ");
+    scanf("%d",&num);
     for(int i=0;i<10;i++){
-        if(key==arr[i]){
-            printf("\nThe element is found!");
+        if(num==arr[i]){
+            key=1;
+            break;
+    }
+}
+    if(key==1){
+    printf("The element is FOUND!\n");
         }
         else{
-            printf("The element is NOT found!");
+            printf("The element is NOT Found!\n");
         }
-    }
     return 0;
 }
