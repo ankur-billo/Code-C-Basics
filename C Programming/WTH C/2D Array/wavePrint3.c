@@ -1,3 +1,4 @@
+//Hint: Column Wise Printing
 //Array Input:
 // 1 2 3
 // 4 5 6
