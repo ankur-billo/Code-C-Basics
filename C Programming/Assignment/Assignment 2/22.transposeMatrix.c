@@ -1,0 +1,1 @@
+// Write a program in C to find transpose of a given matrix.

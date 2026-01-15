@@ -1,0 +1,1 @@
+// Write a program in C to copy the elements of one array into another array.

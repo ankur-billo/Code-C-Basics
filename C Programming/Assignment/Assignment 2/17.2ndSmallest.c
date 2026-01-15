@@ -1,0 +1,1 @@
+// Write a program in C to find the second smallest element in an array.

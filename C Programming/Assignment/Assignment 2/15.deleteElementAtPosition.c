@@ -1,0 +1,1 @@
+// Write a program in C to delete an element at desired position from an array.
