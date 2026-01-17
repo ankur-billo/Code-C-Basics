@@ -1,5 +1,4 @@
 // Write a program in C for subtraction of two Matrices.
-// Write a program in C for addition of two Matrices of same size.
 #include<stdio.h>
 int main(){
     int r,c;
