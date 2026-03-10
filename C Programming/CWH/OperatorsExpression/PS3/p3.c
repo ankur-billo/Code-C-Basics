@@ -9,6 +9,14 @@
 #include<stdio.h>
 
 int main(){
-    printf("");
+    int age, citizen;
+    printf("Enter age: ");
+    scanf("%d",&age);
+    printf("Are you a citizen (1 for Yes / 0 for No): ");
+    scanf("%d",&citizen);
+
+    // for printing true = 1 && false = 0 withou else if hardcode
+    int eligible = (age>=18 && citizen == 1);
+    printf("%d\n",eligible);
     return 0;
 }

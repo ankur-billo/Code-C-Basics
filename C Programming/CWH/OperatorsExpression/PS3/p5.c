@@ -7,6 +7,17 @@
 #include<stdio.h>
 
 int main(){
-    printf("");
+    int x =10;
+    printf("Initial Value: %d\n",x);
+    x+=4;
+    printf("The Value of x : %d\n",x);
+    x-=2;
+    printf("The Value of x : %d\n",x);
+    x*=7;
+    printf("The Value of x : %d\n",x);
+    x/=3;
+    printf("The Value of x : %d\n",x);
+    x%=9;
+    printf("The Value of x : %d\n",x);
     return 0;
 }

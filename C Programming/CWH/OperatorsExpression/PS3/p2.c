@@ -8,6 +8,11 @@
 #include<stdio.h>
 
 int main(){
-    printf("");
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d %d",&a,&b);
+    
+    int greater = a>b;
+    printf("%d\n",greater);
     return 0;
 }
