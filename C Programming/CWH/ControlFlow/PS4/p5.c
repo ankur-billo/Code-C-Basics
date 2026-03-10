@@ -14,6 +14,30 @@
 #include<stdio.h>
 
 int main(){
-    printf("");
+    int a,b;
+    printf("Enter first number: ");
+    scanf("%d",&a);
+    printf("Enter second number: ");
+    scanf("%d",&b);
+    int operation;
+    printf("Enter operation (1-Add, 2-Sub, 3-Mul, 4-Div): ");
+    scanf("%d",&operation);
+    switch(operation){
+        case 1:
+                printf("Result= %d\n",a+b);
+                break;
+        case 2:
+                printf("Result= %d\n",a-b);
+                break;
+        case 3:
+                printf("Result= %d\n",a*b);
+                break;
+        case 4:
+                printf("Result= %d\n",a/b);
+                break;
+        default:
+                printf("Wrong Input!\n");
+                break;
+    }
     return 0;
 }

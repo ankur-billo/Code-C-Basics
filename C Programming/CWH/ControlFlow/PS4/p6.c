@@ -8,6 +8,22 @@
 #include<stdio.h>
 
 int main(){
-    printf("");
+    char c;
+    printf("Enter a character: ");
+    scanf("%c",&c);
+    if((c>='A' && c<='Z')||(c>='a' && c<='z')){
+        if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){
+            printf("%c is a Vowel!\n",c);
+        }else{
+            printf("%c is a Constant!\n",c);
+        }
+    }
+    else if(c>='0' && c<='9'){
+        printf("%c is a Digit!\n",c);
+    }
+    else{
+        printf("%c is a Special Character!\n",c);
+    }
+    // printf("%c\n",c);
     return 0;
 }
