@@ -10,4 +10,28 @@
 // Example Input/Output:
 
 // Enter marks: 82  
-// Grade B
+// Grade B 
+
+#include<stdio.h>
+
+int main(){
+    int n;
+    printf("Enter grade: ");
+    scanf("%d",&n);
+    switch(n/10){
+        case 10:
+        case 9:
+            printf("Grade A\n");
+            break;
+        case 8:
+        case 7:
+            printf("Grade B\n");
+            break;
+        case 6:
+            printf("Grade C\n");
+            break;
+        default :
+            printf("Grade D\n");
+    }
+    return 0;
+}
