@@ -2,6 +2,14 @@
 #include<stdio.h>
 
 int main(){
-    printf("");
+    int n;
+    printf("Enter the natural number: ");
+    scanf("%d",&n);
+    int i=1,sum=0;
+    while(i<=n){
+        sum+=i;
+        i++;
+    }
+    printf("Sum: %d\n",sum);
     return 0;
 }
