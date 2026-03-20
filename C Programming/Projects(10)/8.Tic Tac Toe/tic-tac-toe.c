@@ -1,3 +1,6 @@
+//when am gonna finish this??
+//i don't know let's just hope this year
+//or atleast within 2nd sem
 #include <stdio.h>
 
 int difficulty;
